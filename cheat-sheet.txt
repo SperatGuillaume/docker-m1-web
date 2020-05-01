@@ -1,0 +1,45 @@
+//Commandes
+// Affiche les containers actifs
+docker ps
+docker ps -a
+
+// Affiche les images
+docker images
+
+docker inspect <name-container>
+
+// Stop et supprime le container
+docker stop <name-container>
+docker rm -f  <name-container>
+
+// Suprime une image
+docker rmi <name-image>:<version>
+
+//Créer l'image
+docker build -t <name-image>:<version> .
+//Créer le container
+docker run -tid --name <name-container> <image-name>:<image-version>
+
+//Lance le container
+docker exec -ti <name-container> /bin/bash
+
+
+
+
+// Dockerfile
+
+// Image sur laquelle on se base
+FROM
+
+// Dossier du container
+WORKDIR
+
+
+// Lancer une/des commande
+RUN
+
+// Choisis le port
+EXPOSE
+
+// Commandes à lancer lors du lancement du container 
+CMD
